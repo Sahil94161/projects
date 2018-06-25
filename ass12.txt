@@ -1,0 +1,72 @@
+Q.1- What is an access token? Generate your access 
+token for any API.(for example Twitter,Spotify etc).
+Ans-
+Access token
+              The Access Token is a credential that 
+			  can be used by an application to access an API.
+			  The Access Token should be used as a Bearer credential 
+			  and transmitted in an HTTP Authorization header to the API.
+
+Generate your access
+import tweepy
+con067='Yuzm090wATmHky0fr8LKRnWjfhdj'
+con_sc='OqS3VC186qItBYrwWFb2VjexE0Y5NMuaLpOQo9T9vuAsKhRjsjs'
+access_token='10145456637881057282-EJWliVvpf6okh4i1w1WDcb7sLRqjdfi'
+Access_Token_Secret='I174yyE3BK5YgFcqwzG9vDMCeXJFW39I83q6z1Jemx4555'
+
+	
+	
+Q.2- Get the IP address of some common sites like 
+Google, Facebook by using DNS lookup.
+Ans-
+	C:\Users\gni>nslookup youtube.com
+DNS request timed out.
+    timeout was 2 seconds.
+Server:  UnKnown
+Address:  2405:200:800::1
+
+Non-authoritative answer:
+Name:    youtube.com
+Addresses:  2404:6800:4002:803::200e
+          172.217.161.14
+		  
+C:\Users\gni>nslookup facebook.com
+Server:  UnKnown
+Address:  2405:200:800::1
+
+Non-authoritative answer:
+Name:    facebook.com
+Addresses:  2a03:2880:f10c:83:face:b00c:0:25de
+          157.240.7.35	
+		  
+		  
+		 
+Q.3- Using Tweepy library try to extract tweets from Twitter.
+Ans-import tweepy
+con067=''
+con_sc=''
+access_token=''
+Access_Token_Secret=''
+auth=tweepy.OAuthHandler(con067,con_sc)
+auth.set_access_token(access_token,Access_Token_Secret)
+api=tweepy.API(auth)
+tweets=api.search('#NotWithoutMyDog',lang='en',count= 10,tweet_mode="extended")
+
+
+for tweet in tweets:
+    print("-----------------------")
+    print(tweet.full_text)
+    print("-----------------------")
+		 
+		 
+Q.4- What is a difference between library and API .'
+ Figure it out with examples.
+Ans- 
+A library is a collection of functions / objects that serves 
+one particular purpose. you could use a library in a variety 
+of projects. 
+(Various specialized services in our case)
+
+An API is an interface for other programs to interact with your
+program or library  without having direct access.
+ ( giving specifications for our need to various vendors in our case)
